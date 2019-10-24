@@ -62,6 +62,7 @@ class WavenetTrainer:
             print("epoch", current_epoch)
             tic = time.time()
             for (x, target) in iter(self.dataloader):
+                print("step " + str(step))
                 x = Variable(x.type(self.dtype))
                 target = Variable(target.view(-1).type(self.ltype))
 
